@@ -4,8 +4,120 @@
     box-sizing: border-box;
 }
 
+html,body{
+    font-family: 'Nunito', sans-serif;
+}
+
+.button{
+    display: inline-block;
+    line-height: 52px;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px 30px;
+    text-transform: uppercase;
+    border: 1px solid #dc4f72;
+    border-radius: 5px;
+}
+
 /* HEADER */
-header h1{
-    text-align: center;
-    color: chocolate;
+header{
+    border-bottom: none;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 5%);
+    display: flex;
+    align-items: center;
+}
+.header__content .header__logo{
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #dc4f72;
+    transition: .1s;
+}
+.header__content .header__logo:hover{
+    color: #dc4f72;
+    opacity: .95;
+}
+.header__content .header__menu{
+    display: flex;
+    align-items: center;
+}
+#masterNavbar .nav-item{
+    position: relative;
+}
+#masterNavbar .nav-item a::before{
+    position: absolute;
+    bottom: 5px;
+
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #dc4f72;
+    transition: .5s;
+}
+#masterNavbar .nav-item:hover a::before{
+    width: 30%;
+}
+
+#masterNavbar .nav-item.active a{
+    color: #dc4f72;
+}
+
+.header__content .header__menu .nav-item a{
+    color: #333;
+}
+.header__content .header__menu .button{
+    color: #dc4f72;
+    transition: .5s;
+}
+.header__content .header__menu .button:hover{
+    background-color: #dc4f72;
+    color: white;
+}
+.header__content .header__menu li:last-of-type a{
+    text-decoration: none;
+}
+.header__content .header__menu li:last-of-type{
+    margin-left: 15px;
+}
+.header__menu span{
+    color: #6d6c6c;
+}
+.header__content .header__menu li{
+    padding: 0 7px;
+}
+.header__content .navbar-toggler i:last-of-type{
+    display: none;
+}
+.header__content .navbar-toggler:active i:first-of-type{
+    display: none;
+}
+.header__content .navbar-toggler:active i:last-of-type{
+    display: block;
+}
+
+/* dropdown Pages */
+.dropdown-toggle::after{
+    display: none;
+}
+
+
+/* Reponsive */
+@media screen and (max-width:992px){
+    .header__content .navbar-toggler{
+        background-color: #dc4f72;
+        padding: 7px 9px;
+    }
+    .header__content .navbar-toggler i{
+        color: white;
+    }
+    #masterNavbar .nav-item:hover a{
+        color: #dc4f72;
+    }
+    #masterNavbar .nav-item:hover span{
+        color: #dc4f72;
+    }
 }
