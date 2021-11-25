@@ -255,6 +255,32 @@ header{
     border-radius: 5px;
 }
 
+/* NUMBER */
+.number{
+    background-color: #f7f9fc;
+}
+.number__item{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09);
+    text-align: left;
+    padding: 2rem;
+}
+.number__item h3{
+    font-size: 16px;
+    line-height: 24.5px;
+}
+.number__item h4{
+    font-size: 50px;
+    line-height: 1;
+    padding-top: 15px;
+}
+.number__item p{
+    padding: 7px 0;
+}
+
+
+
 
 /* SOLUTION */
 .solution__item{
@@ -388,6 +414,7 @@ header{
     }
 
 }
+
 
 @media screen and (max-width:576px){
     .carousel__left h3{
