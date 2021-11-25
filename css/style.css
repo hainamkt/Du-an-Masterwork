@@ -262,6 +262,7 @@ header{
 .number__item{
     background-color: white;
     border-radius: 5px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09);
     text-align: left;
     padding: 2rem;
 }
@@ -413,6 +414,7 @@ header{
     }
 
 }
+
 
 @media screen and (max-width:576px){
     .carousel__left h3{
