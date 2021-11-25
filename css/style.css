@@ -355,6 +355,39 @@ header{
 
 
 
+/* QUESTION */
+.question{
+    background-color: #f7f9fc;
+}
+.question__left img{
+    width: 100%;
+}
+.question__collapse{
+    width: 100%;
+    background-color: white;
+    border: none;
+    color: black;
+    text-align: left;
+    padding: 20px;
+    transition: .5s;
+}
+.question__item{
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.question__item:hover .question__collapse{
+    color: black;
+    background-color: white;
+}
+.question__item a{
+    font-size: 20px;
+    line-height: 1;
+}
+
+
+
+
 /* Reponsive */
 @media screen and (max-width:992px){
     .header__content .navbar-toggler{
