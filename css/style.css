@@ -211,6 +211,9 @@ header{
     background-size: cover;
     padding-top: 5rem;
 }
+.carousel__content{
+    overflow: hidden;
+}
 .carousel .row{
     align-items: center;
 }
