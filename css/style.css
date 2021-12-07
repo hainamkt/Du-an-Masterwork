@@ -842,7 +842,7 @@ footer ul{
     text-align: center;
     font-size: 1rem;
     color: white;
-    background-color: #f55f8d;
+    background-color: #e5829c;
     border-radius: 5px;
     opacity: 0;
     visibility: hidden;
@@ -853,6 +853,7 @@ footer ul{
 }
 .backToTop:hover{
     color: white;
+    background-color: #f55f8d;
 }
 
 /* Reponsive */
