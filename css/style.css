@@ -63,7 +63,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 10;
     height: 90px;
 }
 .header__content .navbar{
@@ -113,9 +113,11 @@ header{
     color: #dc4f72;
 }
 .header__content .header__menu .nav-item a{
+    transition: .5s;
     color: #333;
 }
 .header__content .header__menu .button{
+    background-color: white;
     color: #dc4f72;
     transition: .5s;
 }
@@ -157,7 +159,7 @@ header{
     position: absolute;
     top: -7px;
     left: 50%;
-    z-index: 1001;
+    z-index: 100;
 }
 .header__menu .dropdown-item:hover{
     background-color: white;
@@ -378,6 +380,7 @@ header{
 
 /* SOLUTION */
 .solution__item{
+    background-color: white;
     border: 2px solid #f9f2f2;
     border-radius: 5px;
     position: relative;
@@ -549,6 +552,7 @@ header{
     font-weight: 700;
 }
 .feature .tab-pane .button{
+    background-color: white;
     color: #dc4f72;
     text-decoration: none;
     transition: .5s;
@@ -718,6 +722,7 @@ header{
     text-decoration: none;
 }
 .ready__button a:first-of-type{
+    background-color: white;
     color: #dc4f72;
     transition: .5s;
 }
@@ -832,8 +837,9 @@ footer ul{
 /* backtotop */
 .backToTop{
     position: fixed;
-    right: 35px;
-    bottom: 65px;
+    right: 0;
+    bottom: 87px;
+    z-index: 11;
 
     display: block;
     width: 50px;
@@ -846,6 +852,7 @@ footer ul{
     border-radius: 5px;
     opacity: 0;
     visibility: hidden;
+    transition: .5s;
 }
 .cd-top--is-visible{
     opacity: 1;
@@ -855,6 +862,155 @@ footer ul{
     color: white;
     background-color: #f55f8d;
 }
+
+/* Light theme */
+.light-dark{
+    position: fixed;
+    top: 170px;
+    right: 0;
+    z-index: 11;
+}
+#switchButton {
+    background-color: rgb(94, 85, 85);
+    padding: 1rem;
+}
+#switchButton .fa-sun {
+    display: none;
+}
+#switchButton .fa-moon {
+    display: block;
+    color: orange;
+}
+
+/* Dark Theme*/
+.dark#myBody{
+    background-color:#201f1f;
+}
+.dark #switchButton {
+    background-color: blanchedalmond;
+}
+.dark #switchButton .fa-sun {
+    display: block;
+    color: orange;
+}
+.dark #switchButton .fa-moon {
+    display: none;
+}
+.dark .title-dark h3{
+    color: white;
+}
+.dark .title-dark h4{
+    color: #cf2952;
+}
+.dark .title-dark p{
+    color: #D6D6D6;
+}
+.dark .feature .feature__item{
+    color: #0bb2ff;
+}
+.dark .feature .tab-pane h3{
+    color: #ebe6e6;
+}
+.dark .feature .tab-pane p{
+    color: #D6D6D6;
+}
+.dark .about{
+    background-color: black;
+}
+.dark .number{
+    background-color: black;
+}
+.dark .number__item{
+    background-color: blanchedalmond;
+}
+.dark .question{
+    background-color: black;
+}
+.dark .question__item label{
+    background-color: blanchedalmond;
+}
+.dark footer{
+    background-color: black;
+}
+.dark footer h4{
+    color: white;
+}
+.dark footer li a{
+    color: #c3bdbd;
+}
+.dark .footer__form{
+    background-color: blanchedalmond;
+}
+.dark .footer__text p{
+    color: #c3bdbd;
+}
+.dark .footer__text a{
+    color: #f1f1f1;
+    transition: .3s;
+}
+.dark .footer__text a:hover{
+    color: #dc4f72;
+}
+.dark .footer__logo a{
+    color: #f1f1f1;
+    transition: .3s;
+}
+.dark .footer__logo a:hover{
+    color: #dc4f72;
+}
+.dark header{
+    background-color: #161616;
+}
+.dark .header__content .header__menu .nav-item a{
+    color: white;
+    transition: .5s;
+}
+.dark #masterNavbar .nav-item>a:hover {
+    color: #f16e8e;
+}
+.dark .header__menu span{
+    color: white;
+}
+.dark #masterNavbar .nav-item.active a{
+    color: #f16e8e;
+}
+.dark .header__menu .dropdown-menu{
+    background-color: #8a8a8a;
+}
+.dark .header__content .header__menu .nav-item a:hover{
+    color: #f16e8e;
+}
+.dark .header__menu .dropdown-menu::before{
+    background-color: #8a8a8a;
+}
+.dark .header__logo i{
+    font-weight: 700;
+}
+.dark .carousel{
+    background-image: linear-gradient(to right, #fff, rgb(90 12 12 / 92%)), url(../img/banner.jpg);
+}
+.dark .carousel__left h3{
+    color: black;
+}
+.dark .carousel__left p{
+    color: #3c3c3c;
+}
+.dark .testimonial{
+    background-image: linear-gradient(to right, rgb(147 147 147 / 77%), rgb(143 173 213 / 77%)), url(../img/b2.jpg);
+}
+.dark .testimonial .title h3{
+    color: black;
+}
+.dark .testimonial .title h4{
+    color: #f11d51;
+}
+.dark .testimonial .title p{
+    color: #282525;
+}
+.dark .testimonial__item {
+    background-color: #fdf5f5;
+}
+
 
 /* Reponsive */
 @media screen and (max-width:992px){
@@ -944,10 +1100,9 @@ footer ul{
     }
     .testimonial__text i{
         top: -30px;
-        left: 48%;
+        left: 47%;
     }
 }
-
 
 @media screen and (max-width:576px){
     .carousel__left h3{
@@ -955,7 +1110,3 @@ footer ul{
         line-height: 45px;
     }
 }
-
-
-
-
